@@ -1,0 +1,23 @@
+{
+    "name": "xtompie/collection-trait",
+    "autoload": {
+        "psr-4": {
+            "Xtompie\\CollectionTrait\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tomasz Pielczyk",
+            "email": "tomasz.pielczyk@gmail.com"
+        }
+    ],
+    "description": "Traits to build collections of specific objects",
+    "keywords": ["array", "collection", "trait"],
+    "license": "MIT",
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit tests"
+    }
+}
