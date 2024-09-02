@@ -38,4 +38,4 @@ final class UserCollection implements Countable, IteratorAggregate
 }
 ```
 
-Check source: https://github.com/xtompie/collection/blob/master/src/
+Check source: https://github.com/xtompie/collection-trait/blob/master/src/
