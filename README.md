@@ -1,4 +1,4 @@
-# Collection
+# Collection-Trait
 
 Traits to build collections of specific objects
 
@@ -11,7 +11,7 @@ PHP >= 8.0
 Using [composer](https://getcomposer.org/)
 
 ```shell
-composer require xtompie/collectiontrait
+composer require xtompie/collection-trait
 ```
 
 ## Docs
