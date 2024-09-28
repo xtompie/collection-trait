@@ -4,9 +4,15 @@ declare(strict_types=1);
 
 namespace Xtompie\CollectionTrait;
 
-trait ToArray
+trait To
 {
-    public function toArray(?callable $map = null): array
+    /**
+     * @template T of object
+     * @param class-string<T> $class
+     * @param callable|null $map
+     * @return T
+     */
+    public function to(string $class, ?callable $map = null): object
     {
         $result = $this->collection;
         if ($map) {
@@ -14,6 +20,6 @@ trait ToArray
             $result = array_filter($result);
             $result = array_values($result);
         }
-        return $result;
+        return new $class($result);
     }
 }

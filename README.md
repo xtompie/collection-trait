@@ -33,9 +33,9 @@ final class UserCollection implements Countable, IteratorAggregate
 
     public function active(): static
     {
-        return $this->filter(fn(User $user) => $user->isActive());
+        return $this->filter(fn (User $user) => $user->isActive());
     }
 }
 ```
 
-Check source: https://github.com/xtompie/collection-trait/blob/master/src/
+Check source: <https://github.com/xtompie/collection-trait/blob/master/src/>
