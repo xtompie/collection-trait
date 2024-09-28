@@ -4,8 +4,15 @@ declare(strict_types=1);
 
 namespace Xtompie\CollectionTrait;
 
+/**
+ * @template T
+ */
 trait ToArray
 {
+    /**
+     * @param callable(T, int):mixed|null $map
+     * @return array<T>
+     */
     public function toArray(?callable $map = null): array
     {
         $result = $this->collection;

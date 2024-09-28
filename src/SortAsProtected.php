@@ -4,19 +4,21 @@ declare(strict_types=1);
 
 namespace Xtompie\CollectionTrait;
 
-use Xtompie\Sorter\Sort;
-use Xtompie\Sorter\Sorter;
-
 trait SortAsProtected
 {
     /**
-     * @param Sort[] $sorts
+     * @param array<\Xtompie\Sorter\Sort> $sorts
      * @return static
      */
     protected function sort(array $sorts): static
     {
+        if (!class_exists(\Xtompie\Sorter\Sorter::class)) {
+            throw new \Exception('Package xtompie/sorter is missing. Run "composer install xtompie/sorter" to use this feature.');
+        }
+
+        $sorter = new \Xtompie\Sorter\Sorter();
         return new static(
-            (new Sorter())($sorts, $this->collection)
+            $sorter($sorts, $this->collection)
         );
     }
 }

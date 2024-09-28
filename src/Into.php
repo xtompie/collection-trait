@@ -4,8 +4,17 @@ declare(strict_types=1);
 
 namespace Xtompie\CollectionTrait;
 
+/**
+ * @template T
+ * @template R
+ */
 trait Into
 {
+    /**
+     * @param class-string<R>|null $class
+     * @param callable(T, int):mixed|null $map
+     * @return array<T>|R
+     */
     public function into(?string $class, ?callable $map = null): mixed
     {
         $result = $this->collection;

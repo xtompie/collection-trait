@@ -4,8 +4,14 @@ declare(strict_types=1);
 
 namespace Xtompie\CollectionTrait;
 
+/**
+ * @template T
+ */
 trait ArrayAccessTrait
 {
+    /**
+     * @param T $value
+     */
     public function offsetSet($offset, $value): void
     {
         if (is_null($offset)) {
@@ -25,6 +31,9 @@ trait ArrayAccessTrait
         unset($this->collection[$offset]);
     }
 
+    /**
+     * @return T|null
+     */
     public function offsetGet($offset): mixed
     {
         return isset($this->collection[$offset]) ? $this->collection[$offset] : null;
