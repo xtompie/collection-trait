@@ -11,7 +11,7 @@ trait ToArray
 {
     /**
      * @param callable(T, int):mixed|null $map
-     * @return array<T>
+     * @return array<T>|array<mixed>
      */
     public function toArray(?callable $map = null): array
     {
