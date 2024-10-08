@@ -4,13 +4,16 @@ declare(strict_types=1);
 
 namespace Xtompie\CollectionTrait;
 
+/**
+ * @template T
+ */
 trait To
 {
     /**
-     * @template T of object
-     * @param class-string<T> $class
-     * @param callable|null $map
-     * @return T
+     * @template Y of object
+     * @param class-string<Y> $class
+     * @param callable(T, int):mixed|null $map
+     * @return Y
      */
     public function to(string $class, ?callable $map = null): object
     {
