@@ -10,7 +10,7 @@ namespace Xtompie\CollectionTrait;
 trait Filter
 {
     /**
-     * @param callable(T, int):bool|null $fn
+     * @param callable(T, int):bool|callable(T):bool|null $fn
      * @return static
      */
     public function filter(?callable $fn = null): static
