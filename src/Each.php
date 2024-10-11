@@ -10,7 +10,7 @@ namespace Xtompie\CollectionTrait;
 trait Each
 {
     /**
-     * @param callable(T, int):void $fn
+     * @param callable(T, int)|callable(T):void $fn
      * @return static
      */
     public function each(callable $fn): static
